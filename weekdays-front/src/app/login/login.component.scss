@@ -1,0 +1,23 @@
+.loginWrapper {
+  margin: 0 auto;
+  width: 22vw;
+  text-align: center;
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: baseline;
+
+    .formString {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .submitButton {
+      width: 30%;
+      margin: 0 auto;
+    }
+  }
+}

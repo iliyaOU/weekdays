@@ -1,0 +1,14 @@
+<div class="loginWrapper">
+    <h2>Авторизация</h2>
+    <form (ngSubmit)="onSubmit()" class="loginForm">
+        <div class="formString">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="formString">
+        <label>Пароль:</label>
+        <input type="password" [(ngModel)]="password" name="password" required>
+    </div>
+        <button type="submit" class="submitButton">Войти</button>
+    </form>
+</div>

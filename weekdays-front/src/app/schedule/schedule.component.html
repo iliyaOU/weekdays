@@ -1,0 +1,17 @@
+<div class="scheduleWrapper">
+<h2 class="title">Расписание доступа</h2>
+<table>
+  <tr *ngFor="let day of days">
+    <td>{{ day.name }}</td>
+    <td>
+      <input type="time" [(ngModel)]="day.startTime" max="23:59">
+    </td>
+    <td>
+      <input type="time" [(ngModel)]="day.endTime" max="23:59">
+    </td>
+    <td>
+      <button (click)="updateTime(day)">Обновить</button>
+    </td>
+  </tr>
+</table>
+</div>
