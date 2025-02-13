@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 import { User } from "./models/User";
 import bcrypt from "bcryptjs";
-import { Schedule } from "./models/Schedule";
 
-const initDB = async () => {
+export const initDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI!);
 
@@ -31,5 +30,3 @@ const initDB = async () => {
     await mongoose.disconnect();
   }
 };
-
-initDB();
