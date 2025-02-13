@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./weekdays-back
+    ports:
+      - "3010:3010"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/weekdays
+
+  frontend:
+    build: ./weekdays-front
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://localhost:3010
+
+volumes:
+  mongo-data:

@@ -11,7 +11,7 @@ import { initDB } from "./initDb";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = 3010;
 
 app.use(cors());
 app.use(express.json());

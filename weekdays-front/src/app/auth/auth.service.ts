@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class AuthService {
-  private loginUrl = 'http://localhost:2000/api/auth/login';
-  private tokenKey = 'authToken';
+  private loginUrl = "http://localhost:3010/api/auth/login";
+  private tokenKey = "authToken";
 
   constructor(
     private http: HttpClient,
@@ -29,7 +29,7 @@ export class AuthService {
 
   removeToken(): void {
     localStorage.removeItem(this.tokenKey);
-    this.router.navigate(['/login']);
+    this.router.navigate(["/login"]);
   }
 
   isAuthenticated(): boolean {

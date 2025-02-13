@@ -13,6 +13,6 @@ RUN npm run build
 
 RUN npm run initdb
 
-EXPOSE 3000
+EXPOSE 3010
 
 CMD ["node", "dist/index.js"]
